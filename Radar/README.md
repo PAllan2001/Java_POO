@@ -90,7 +90,7 @@ src/
 
 * Encapsulamento
 * Separação de responsabilidades
-* Organização em camadas
+* Organização Em Camadas
 * Regras de negócio isoladas
 * Métodos reutilizáveis
 
