@@ -8,6 +8,10 @@ public class ServiceFuncionarios {
     private ArrayList<Funcionarios> funcionarios = new ArrayList<>();
 
     public void addFuncionarios(Funcionarios funcionarios){
+        if (cpfExiste(funcionarios.getCPF())) {
+            System.out.println("Já existe um funcionário com esse CPF.");
+            return;
+        }
         this.funcionarios.add(funcionarios);
         System.out.println("Funcionarios adicionado com sucesso");
 
@@ -19,6 +23,14 @@ public class ServiceFuncionarios {
             }
         }
         return null;
+    }
+    private boolean cpfExiste(long cpf) {
+        for (Funcionarios funcionarios : this.funcionarios) {
+            if (funcionarios.getCPF() == cpf) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void removerPorCpf(long cpf) {

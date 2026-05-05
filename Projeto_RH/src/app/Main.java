@@ -43,7 +43,7 @@ public class Main {
                     System.out.print("Total de Vendas: ");
                     v.setTotalVendas(sc.nextDouble());
 
-                    System.out.print("Percentual Comissão (ex: 0.1): ");
+                    System.out.print("Percentual Comissão (ex: 0.1 = 10%): ");
                     v.setPercentualComissao(sc.nextDouble());
 
                     service.addFuncionarios(v);
@@ -64,7 +64,7 @@ public class Main {
                     System.out.print("Faturamento da Loja: ");
                     g.setFaturamentoLoja(sc.nextDouble());
 
-                    System.out.print("Percentual Bônus (ex: 0.05): ");
+                    System.out.print("Percentual Bônus (ex: 0.05 = 5%): ");
                     g.setPercentualBonus(sc.nextDouble());
 
                     service.addFuncionarios(g);
@@ -91,9 +91,6 @@ public class Main {
                     long Cpf = sc.nextLong();
                     service.removerPorCpf(Cpf);
                     break;
-
-
-
 
                 case 0:
                     System.out.println("Encerrando...");
