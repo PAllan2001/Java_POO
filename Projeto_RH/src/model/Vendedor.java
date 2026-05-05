@@ -1,11 +1,10 @@
+package model;
+
 public class Vendedor extends Funcionarios {
 
     private double totalVendas;
     private double percentualComissao; // exemplo: 0.10 = 10%
 
-    public Vendedor() {
-        super();
-    }
 
     @Override
     public double calcularSalario() {
@@ -26,8 +25,13 @@ public class Vendedor extends Funcionarios {
     public void setTotalVendas(double totalVendas) {
         this.totalVendas = totalVendas;
     }
-
+    public double getTotalVendas() {
+        return totalVendas;
+    }
     public void setPercentualComissao(double percentualComissao) {
         this.percentualComissao = percentualComissao;
+    }
+    public double getPercentualComissao() {
+        return percentualComissao;
     }
 }

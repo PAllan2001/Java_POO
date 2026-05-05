@@ -1,3 +1,5 @@
+package model;
+
 public class Moto extends Veiculo {
     public Moto() {
         super();
@@ -5,6 +7,6 @@ public class Moto extends Veiculo {
 
     @Override
     public void ligar() {
-        System.out.println("Moto Ligada com pedal. ");
+        System.out.println("model.Moto Ligada com pedal. ");
     }
 }

@@ -1,11 +1,9 @@
+package model;
+
 public class Gerente extends Funcionarios {
 
     private double faturamentoLoja;
     private double percentualBonus; // exemplo: 0.05 = 5%
-
-    public Gerente() {
-        super();
-    }
 
     @Override
     public double calcularSalario() {
@@ -26,8 +24,14 @@ public class Gerente extends Funcionarios {
     public void setFaturamentoLoja(double faturamentoLoja) {
         this.faturamentoLoja = faturamentoLoja;
     }
+    public double getFaturamentoLoja() {
+        return faturamentoLoja;
+    }
 
     public void setPercentualBonus(double percentualBonus) {
         this.percentualBonus = percentualBonus;
+    }
+    public double getPercentualBonus() {
+        return percentualBonus;
     }
 }

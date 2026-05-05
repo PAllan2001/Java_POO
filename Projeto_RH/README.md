@@ -1,85 +1,52 @@
-🏗️ Estrutura do Sistema
+# 🧑‍💼 Sistema de RH (Java)
 
-O sistema é composto por uma classe base e classes derivadas, representando diferentes tipos de funcionários dentro de uma empresa.
+Projeto desenvolvido em Java com o objetivo de praticar Programação Orientada a Objetos (POO) e organização de código com separação de responsabilidades.
 
-🔹 Classe Base: Funcionario
+---
 
-A classe Funcionario representa um funcionário genérico e serve como base para os demais tipos.
+## 🎯 Objetivo
 
-Atributos (privados):
+Simular um sistema simples de gestão de funcionários, aplicando conceitos como herança, polimorfismo e regras de negócio.
 
-nome: nome do funcionário
+---
 
-cpf: CPF do funcionário
+## ⚙️ Funcionalidades
 
-salarioBase: salário base do funcionário
+- Cadastro de funcionários (Gerente e Vendedor)
+- Cálculo de salário baseado em regras específicas:
+  - Vendedor: salário + comissão sobre vendas
+  - Gerente: salário + bônus sobre faturamento
+- Listagem de funcionários
+- Busca por CPF
+- Remoção de funcionário
 
-Métodos públicos:
+---
 
-calcularSalario(): método responsável por calcular o salário final do funcionário. Ele é sobrescrito nas subclasses.
+## 🧱 Estrutura do Projeto
 
-mostrarInfo(): exibe as informações do funcionário, como nome, CPF e salário final.
+src/
+├── model/
+│ ├── Funcionarios.java
+│ ├── Vendedor.java
+│ └── Gerente.java
+├── service/
+│ └── FuncionarioService.java
+└── app/
+└── Main.java
 
-Além disso, todos os atributos possuem getters e setters, garantindo o encapsulamento e o controle do acesso aos dados.
+---
 
-🔹 Subclasses
+## 🧠 Conceitos Aplicados
 
-As subclasses herdam da classe Funcionario e implementam regras específicas para o cálculo do salário.
+- Programação Orientada a Objetos (POO)
+- Herança e Polimorfismo
+- Encapsulamento
+- Separação de responsabilidades (Model / Service / Main)
+- Uso de ArrayList para simular armazenamento
 
-🧑‍💼 Classe Gerente
+---
 
-Herda todos os atributos e métodos de Funcionario.
-
-Sobrescreve o método calcularSalario().
-
-Regra de cálculo:
-salário final = salárioBase + 2000
-
-🧑‍💻 Classe Vendedor
-
-Também herda de Funcionario.
-
-Possui um valor adicional de comissão.
-
-Sobrescreve o método calcularSalario().
-
-Regra de cálculo:
-salário final = salárioBase + comissão
-
-🔁 Polimorfismo
-
-O polimorfismo é aplicado ao sobrescrever o método calcularSalario() em cada subclasse.
-Mesmo chamando o método a partir de uma referência do tipo Funcionario, o sistema executa a versão correta do método conforme o tipo real do objeto (Gerente ou Vendedor).
-
-Isso torna o código mais flexível, organizado e fácil de manter.
-
-🔐 Encapsulamento e Modificadores de Acesso
-
-Todos os atributos são privados, impedindo acesso direto externo.
-
-O acesso aos dados é feito exclusivamente por métodos públicos (getters e setters).
-
-Na classe Main:
-
-São criados objetos do tipo Gerente e Vendedor.
-
-Para cada objeto, são chamados os métodos:
-
-calcularSalario()
-
-mostrarInfo()
-
-Isso demonstra, na prática, o funcionamento do sistema e a aplicação dos conceitos de POO.
-
-
-Este projeto foi desenvolvido com fins educacionais, com o objetivo de:
-
-Aplicar herança entre classes
-
-Utilizar polimorfismo por meio da sobrescrita de métodos
-
-Garantir encapsulamento dos dados
-
-Organizar um sistema simples seguindo boas práticas de POO
-Os métodos principais do sistema também são públicos, garantindo comunicação controlada entre as classes.
-
+📚 Aprendizados
+- Estruturação de código em camadas
+- Implementação de regras de negócio fora da classe principal
+- Evolução de código simples para um modelo mais organizado

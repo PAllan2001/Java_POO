@@ -1,12 +1,10 @@
+package model;
 
 public class Funcionarios {
     private String Nome ;
     private long CPF ;
     private double salarioBase;
 
-    public Funcionarios () {
-
-    }
 
     public double calcularSalario() {
         return salarioBase;
